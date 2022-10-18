@@ -16,6 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from AppModel.views import *
+from AppModel.models import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -23,4 +24,5 @@ urlpatterns = [
     path('saludar/<nombres>/<apellidos>', saludando),
     path('notas/', fnotas),
     path('calcimc/<peso>/<altura>', calcimc),
+    path('mifamilia/', mostrar_familiares), 
 ]

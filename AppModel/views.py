@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from AppModel.models import Familiar
 
 # Create your views here.
 
@@ -26,3 +27,7 @@ def fnotas(request):
 def calcimc(request, peso, altura):
     imc=int(peso)/(int(altura)*int(altura))
     return render(request, "AppModel/imc.html", {'imc':imc})
+
+def mostrar_familiares(request):
+  lista_familiares = Familiar.objects.all()
+  return render(request, "AppModel/familiares.html", {"lista_familiares": lista_familiares})
