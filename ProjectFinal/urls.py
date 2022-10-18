@@ -20,4 +20,7 @@ from AppModel.views import *
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('saludar/', saludo),
+    path('saludar/<nombres>/<apellidos>', saludando),
+    path('notas/', fnotas),
+    path('calcimc/<peso>/<altura>', calcimc),
 ]

@@ -7,6 +7,18 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Este es mi primer template</h1>
+    <h1>Este es mi primer template </h1>
+    <h2>Mi nombre: {{nombre}} y mi Apellido {{apellido}}</h2>
+    <br>
+
+    {% for nota in notas %}
+        {% if nota > 5 %}
+            <p style="color: red ;">{{nota}}</p>
+        {% else %}
+        <p style="color: blue ;">{{nota}}</p>
+        {% endif %}
+        <br>
+    {% endfor %}
+
 </body>
 </html>
