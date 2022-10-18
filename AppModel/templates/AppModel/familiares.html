@@ -9,10 +9,23 @@
 <body>
     <h1>Lista de mis familiares</h1>
 
-    <ul>
+    <table>
+        <tr>
+            <td bgcolor="yellow">Nombre</td>
+            <td bgcolor="yellow">Dirección</td>
+            <td bgcolor="yellow">Pasaporte</td>
+            <td bgcolor="yellow">Fecha de nacimiento</td>
+        </tr>
+        
     {% for familiar in lista_familiares %}
-        <li> Nombre: {{familiar.nombres}}, Dirección: {{familiar.direccion}}, Pasaporte: {{familiar.numero_pasaporte}} </li>
+        <tr>
+            <td>  {{familiar.nombres}}</td>
+            <td>  {{familiar.direccion}}</td>
+            <td>  {{familiar.numero_pasaporte}}</td>
+            <td align="center">  {{familiar.nacimiento}}</td>
+        </tr>
     {% endfor %}
-    </ul>
+        
+    </table>
 </body>
 </html>
