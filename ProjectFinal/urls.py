@@ -25,4 +25,5 @@ urlpatterns = [
     path('notas/', fnotas),
     path('calcimc/<peso>/<altura>', calcimc),
     path('mifamilia/', mostrar_familiares), 
+    path('mifamilia/buscar', BuscarFamiliar.as_view()),
 ]
