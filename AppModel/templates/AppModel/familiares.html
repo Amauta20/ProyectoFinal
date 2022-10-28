@@ -11,6 +11,7 @@
 
     <table>
         <tr>
+            <td bgcolor="yellow">Id</td>
             <td bgcolor="yellow">Nombre</td>
             <td bgcolor="yellow">Dirección</td>
             <td bgcolor="yellow">Pasaporte</td>
@@ -19,6 +20,7 @@
         
     {% for familiar in lista_familiares %}
         <tr>
+            <td>  {{familiar.id}}</td>
             <td>  {{familiar.nombres}}</td>
             <td>  {{familiar.direccion}}</td>
             <td>  {{familiar.numero_pasaporte}}</td>
